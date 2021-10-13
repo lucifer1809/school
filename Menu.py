@@ -4,13 +4,13 @@ import os
 
 
 def __information__():
-    os.system( 'python  Std_info_FrontEnd.py')
+    os.system( 'python3  Std_info_FrontEnd.py')
     # os.system('notepad' + filename)
 
 
 def __FeeReport__():
 
-    os.system('python  Fee_Frontend.py')
+    os.system('python3  Fee_Frontend.py')
 
 
 def menu():

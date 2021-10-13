@@ -22,7 +22,6 @@ def main():
 
 class Window_1:
     def __init__(self, master):
-        self.Exit = tkinter.messagebox.askokcancel("Login System", "Confirm if you want to Exit")
         self.master = master
         self.master.title("School Management System")
         self.master.geometry('1350x750')
@@ -66,6 +65,8 @@ class Window_1:
         self.btnExit = Button(self.Login_Frame_2, text='Exit', width=10, font=('airia', 15, 'bold'), command=self.Exit)
         self.btnExit.grid(row=3, column=2, padx=8, pady=20)
 
+
+
     def Login(self):
         u = (self.Username.get())
         p = (self.Password.get())
@@ -84,8 +85,9 @@ class Window_1:
         self.Password.set("")
         self.text_Username.focus()
 
-    def Exit(self):
-        if self.Exit > 0:
+    def Exit(self=None):
+        Exit = tkinter.messagebox.askyesno("Login System", "Confirm if you want to Exit")
+        if Exit > 0:
             self.master.destroy()
             return
 
