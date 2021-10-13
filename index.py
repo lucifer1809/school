@@ -5,6 +5,7 @@ from tkinter import ttk
 import random
 import time
 import datetime
+import Menu
 
 
 def main():
@@ -13,10 +14,10 @@ def main():
     root.mainloop()
 
 
-def __menu__():
-    filename = '/home/lucifer/PycharmProjects/School/Menu.py'
+# def __menu__():
+#     filename = '/home/lucifer/PycharmProjects/School/Menu.py'
 
-    open(filename)
+#     open(filename)
 
 
 class Window_1:
@@ -70,7 +71,9 @@ class Window_1:
         p = (self.Password.get())
 
         if u == str('a') and p == str('a'):
-            __menu__()
+            # __menu__()
+            Menu.menu()
+            
         else:
             tkinter.messagebox.askyesno("Login", "Error : Wrong Password")
             self.Username.set("")
